@@ -96,7 +96,18 @@ ggplot(gapminder, aes(gdpPercap)) +
 
 - Add a `size` aesthetic to a scatterplot. What about `cex`?
 - Try adding `scale_radius()` and `scale_size_area()`. What's better?
+
+```{r}
+gvsl + geom_point(aes(size = pop), alpha = 0.2) +
+  scale_size_area() #size of bubble proportional to pop
+# we could to radius, but size is better for what we see
+```
+
 - Use `shape=21` to distinguish between `fill` (interior) and `colour` (exterior).
+
+```{r}
+gvsl + geom_point(aes(size = pop, fill = continent), shape = 21, color = "black", alpha = 0.2)
+```
 
 ## "Complete" plot
 
@@ -106,7 +117,12 @@ Let's try plotting much of the data.
 - facet by year
 - colour by continent
 
-
+```{r}
+gvsl +
+  geom_point(aes(size = pop, color = continent)) +
+  scale_size_area() +
+  facet_wrap(~ year)
+```
 
 # Continue from last time (geom exploration with `x` and `y` aesthetics)
 
