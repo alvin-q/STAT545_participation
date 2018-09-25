@@ -78,7 +78,19 @@ ggplot(gapminder, aes(lifeExp)) +
 
 Make histograms of `gdpPercap` for each continent. Try the `scales` and `ncol` arguments. 
 
+```{r}
+ggplot(gapminder, aes(lifeExp)) +
+  geom_histogram() +
+  facet_wrap(~ continent, scales = "free_x")
+```
+
 Remove Oceania. Add another variable: `lifeExp > 60`. 
+
+```{r}
+ggplot(gapminder, aes(gdpPercap)) +
+  geom_histogram() +
+  facet_grid(continent ~ lifeExp > 60)
+```
 
 ## Bubble Plots
 
