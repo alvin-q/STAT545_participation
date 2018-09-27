@@ -214,8 +214,8 @@ gapminder %>%
 
 2. Compute the relative gdp (NOT per capita!) of each country compared to Canada (= GDP of a country / GDP of Canada).
 
-```{r}
-cda = gapminder %>%
+```{r, eval = FALSE}
+cda <- gapminder %>%
   mutate(gdp = gdpPercap * pop) %>%
   filter(country == "Canada") %>%
   `[[`("gdp")
