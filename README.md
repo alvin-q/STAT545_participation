@@ -1,4 +1,4 @@
-# STAT 545 Participation
+# STAT 545/547 Participation
 
 This repo is part of Alvin's STAT 545 and 547 class participation
 
