@@ -1,0 +1,1 @@
+.libPaths(c("C:/Users/Alvin/Documents/R/win-library/3.5", "C:/Program Files/R/R-3.5.1/library"))
